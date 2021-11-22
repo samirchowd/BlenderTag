@@ -8,6 +8,9 @@ class conversation():
     def listen(self):
         inp = input()
 
+        if inp.startswith('!'):
+            return inp
+
         self.conv[self.id]= {'id': self.id,
                              'message': inp,
                              'author': 'user',
@@ -32,6 +35,7 @@ class conversation():
         print('='*30, end='\n')
 
         # Asking User
+        print('Previous Statement: {}'.format(self.conv[self.id-1]['message']))
         tags = input('Please input the tags for the previous statement in a comma seperated list\n')
         self.conv[self.id-1]['tags'] = tags.split(',')
 

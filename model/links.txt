@@ -1,1 +1,0 @@
-http://parl.ai/downloads/_models/blenderbot2/blenderbot2_400M/model.tgz
